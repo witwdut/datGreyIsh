@@ -18,7 +18,7 @@
         }
 
         // Retrieve every element with the class bookTitle
-        var x = document.getElementsByClassName('bookTitle');
+        var bookTItle = document.getElementsByClassName('bookTitle');
         // Function that changes color everytime the user changes the book title
         function changeColor(){
             // Create a prompt that will store the users information in the variable name
@@ -27,7 +27,7 @@
             let i = 0;
             //If the user entered an invalid name they have 3 tries to change it
             while(name.length === 0 || i >3){
-                const name = prompt('Ehat is the name of the book?');
+                const name = prompt('What is the name of the book?');
                 i++;
             }
             // Change the text of the current element to whatever they wrote
@@ -42,13 +42,13 @@
             this.classList.add('test');
         }
         // Run a for loop to add specific properties to every element that has the class bookTitle
-        for (let i = 0; i < x.length; i++) {
+        for (let i = 0; i < bookTItle.length; i++) {
             // Change every color to red
-            x[i].style.color = "red";
+            bookTItle[i].style.color = "red";
             // change every font-size to 1.4em
-            x[i].style.fontSize = "1.4em";
+            bookTItle[i].style.fontSize = "1.4em";
             // Add an event LIstener to change the text color on every click
-            x[i].addEventListener('click',changeColor);
+            bookTItle[i].addEventListener('click',changeColor);
         }
     }
 })();
